@@ -79,6 +79,15 @@ public class OrdemServico implements Serializable {
     public OrdemServico() {
         
     }
+    
+    public void adicionarItemServico(ItemServico obj){
+        obj.setOrdemServico(this);
+        this.getItensServicos().add(obj);
+    }
+    
+    public void removerItemServico(int index){
+        this.itensServicos.remove(index);
+    }
 
     public Integer getId() {
         return id;
